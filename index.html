@@ -104,5 +104,53 @@
             document.getElementById("quote").style.display = "block";
         }
     </script>
-</body>
+</body><h2>Book a Cut</h2>
+<div class="project">
+    <h3>Isaac the Barber - Windhoek</h3>
+    <p><strong>Services:</strong></p>
+    <p>Fresh Fade - N$80</p>
+    <p>Cut + gold black - N$120</p>
+    <p>Line Up Only - N$40</p>
+    
+    <p><strong>Pick your slot:</strong></p>
+    <select id="service">
+        <option>Fresh Fade N$80</option>
+        <option>Cut + gold black N$120</option>
+        <option>Line Up Only N$40</option>
+    </select>
+    <br><br>
+    <input type="date" id="date">
+    <input type="time" id="time">
+    <br><br>
+    <button onclick="bookNow()" class="contact-btn">Book on WhatsApp</button>
+</div>
+
+<script>
+function bookNow() {
+    let service = document.getElementById("service").value;
+    let date = document.getElementById("date").value;
+    let time = document.getElementById("time").value;
+    
+    if(date === "" || time === "") {
+        alert("Pick a date and time first bro");
+        return;
+    }
+    
+    let message = `Yo Isaac, I wanna book: ${service} on ${date} at ${time}. You free?`;
+    let whatsappLink = `https://wa.me/264818645694?text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, '_blank');
+}
+</script>
+
+<style>
+select, input {
+    background-color: #1a1a1a;
+    color: lightblue;
+    border: 1px solid lightblue;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+</style>
 </html>
