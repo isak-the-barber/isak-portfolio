@@ -4,18 +4,27 @@
     <title>Isaac | Developer</title>
     <style>
         body {
-            background-image: url('logo.png');
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
-background-color: rgba(0,0,0,0.4);
-background-blend-mode: overlay;
-            color: lightblue;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 40px 20px;
-        }
+    background-image: url('logo.png');
+    background-size: 120% 120%; /* Makes logo bigger than screen so it can move */
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(0,0,0,0.4); /* Keep your brightness you just set */
+    background-blend-mode: overlay;
+    animation: logoDrift 25s ease-in-out infinite; /* This makes it drift */
+    
+    color: lightblue;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 40px 20px;
+}
+        @keyframes logoDrift {
+    0% { background-position: 0% 0%; }
+    25% { background-position: 100% 0%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
+    100% { background-position: 0% 0%; }
+}
         h1 {
             font-size: 48px;
             margin-bottom: 10px;
