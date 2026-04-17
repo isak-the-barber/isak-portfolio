@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Isaac | Windhoek</title>
+    <title>Isaac | Developer</title>
     <style>
         body {
             background-color: black;
             color: lightblue;
             font-family: Arial, sans-serif;
             text-align: center;
-            margin-top: 100px;
+            margin: 0;
+            padding: 40px 20px;
         }
         h1 {
             font-size: 48px;
             margin-bottom: 10px;
         }
+        h2 {
+            font-size: 32px;
+            margin-top: 60px;
+            color: white;
+        }
         p {
             font-size: 20px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 15px auto;
         }
         button {
-            background-color: white;
+            background-color: lightblue;
             color: black;
             border: none;
             padding: 12px 24px;
@@ -29,7 +38,7 @@
             border-radius: 5px;
         }
         button:hover {
-            background-color: whitesmoke;
+            background-color: white;
         }
         #quote {
             margin-top: 40px;
@@ -41,13 +50,35 @@
             line-height: 1.6;
             display: none;
         }
+        .project {
+            background-color: #1a1a1a;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 500px;
+            border-left: 4px solid lightblue;
+            text-align: left;
+        }
+        .contact-btn {
+            display: inline-block;
+            background-color: lightblue;
+            color: black;
+            text-decoration: none;
+            padding: 12px 24px;
+            margin: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .contact-btn:hover {
+            background-color: white;
+        }
     </style>
 </head>
 <body>
-    <h1>isak-the-barber</h1>
-    <p>I want to change the world into a better place</p>
+    <h1>Isaac</h1>
+    <p>Developer from Windhoek, Namibia.</p>
+    <p>I want to create things that outlive me.</p>
     
-    <button onclick="showQuote()">Click me</button>
+    <button onclick="showQuote()">My Mindset</button>
     
     <p id="quote">
         In this world man, you should just learn to take whatever bad situation 
@@ -55,6 +86,18 @@
         In this world we are all going to die. The goal isn't to live forever. 
         The goal is to create something that will live forever.
     </p>
+
+    <h2>Projects</h2>
+    <div class="project">
+        <h3>Personal Portfolio Website</h3>
+        <p>Built with HTML, CSS, and JavaScript. Deployed live on Netlify.</p>
+        <p><strong>Status:</strong> Live</p>
+    </div>
+
+    <h2>Contact Me</h2>
+    <p>Want to build something together?</p>
+    <a href="https://wa.me/264818645694" class="contact-btn">WhatsApp Me</a>
+    <a href="mailto:isakkassoma20@gmail.com" class="contact-btn">Email Me</a>
 
     <script>
         function showQuote() {
